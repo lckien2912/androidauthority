@@ -16,6 +16,16 @@
   font-family: HKGrotesk-Bold;
   src: url(../fonts/hkgrotesk/OTF/HKGrotesk-Bold.otf);
 }
+
+@font-face {
+  font-family: HKGrotesk-Med;
+  src: url(../fonts/hkgrotesk/OTF/HKGrotesk-Medium.otf);
+}
+
+@font-face {
+  font-family: HKGrotesk-semiBold;
+  src: url(../fonts/hkgrotesk/OTF/HKGrotesk-SemiBold.otf);
+}
 html {
   font-size: 62.5%;
   line-height: 1.6rem;
