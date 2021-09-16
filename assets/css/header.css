@@ -6,7 +6,7 @@
   padding: 0 40px;
 }
 
-.header__logo {
+.header .header__logo {
   display: flex;
   align-items: center;
 }
@@ -33,7 +33,7 @@
   font-size: 1.6rem;
   padding: 0 20px;
   cursor: pointer;
-  position: relative;
+  /* position: relative; */
   /* gap: 20px; */
 }
 
@@ -49,60 +49,6 @@
 .navbar__option-icon {
   padding-bottom: 4px;
   margin-left: 6px;
-}
-
-.navbar__list {
-  top: 120%;
-  left: 0;
-  position: absolute;
-  background-color: rgba(28, 28, 28, 0.8);
-  backdrop-filter: blur(30px);
-  border-radius: 4px;
-}
-
-.navbar__option-list {
-  padding: 15px 0;
-  margin: 10px 0;
-  margin-top: 20px;
-  position: relative;
-
-  /* border-top: 6px solid rgba(0, 0, 0, 0.6); */
-}
-
-.navbar__option-list::before {
-  position: absolute;
-  display: block;
-  width: calc(100% - 60px);
-  border-radius: 4px;
-  content: "";
-  top: 6px;
-  left: 48px;
-  height: 4px;
-  background-color: #ccc;
-  opacity: 0.2;
-}
-
-.navbar__item:hover .navbar__option-list::before::hover {
-  background-color: var(--main-color);
-  opacity: 1;
-}
-
-.navbar__item {
-  display: flex;
-  padding: 10px;
-  padding-left: 0;
-  margin-left: 35px;
-}
-
-.navbar__item:hover .navbar__item-link {
-  color: var(--main-color);
-}
-.navbar__item-link {
-  color: var(--white-color);
-  font-family: HKGrotesk-Med;
-}
-
-.navbar__item-link--all {
 }
 
 .header__search {
@@ -195,4 +141,42 @@
 
 .header__deals-icon {
   margin-left: 10px;
+}
+
+.header__ad {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  top: 60px;
+  left: 0;
+  height: 40px;
+  background-color: var(--main-color);
+  box-shadow: 0 4px 12px -4px rgba(0, 212, 159, 0.5);
+  user-select: none;
+  cursor: pointer;
+}
+
+.header__ad-content {
+  display: flex;
+  margin: 13px 20px;
+  color: var(--black-color);
+}
+
+.header__ad:hover .header__ad-content {
+  color: var(--white-color);
+}
+
+.header__ad-icon {
+  font-size: 1.4rem;
+}
+
+.header__ad-icon:first-child {
+  margin-right: 20px;
+}
+.header__ad-icon:last-child {
+  margin-left: 20px;
+}
+
+.header__ad-title {
+  font-size: 1.4rem;
 }
