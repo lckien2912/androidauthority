@@ -1,0 +1,66 @@
+:root {
+  --main-color: #00d49f;
+  --white-color: #fff;
+  --black-color: #000;
+  --grey-color: #7c7c7c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: HKGrotesk-Bold;
+}
+
+@font-face {
+  font-family: HKGrotesk-Bold;
+  src: url(../fonts/hkgrotesk/OTF/HKGrotesk-Bold.otf);
+}
+html {
+  font-size: 62.5%;
+  line-height: 1.6rem;
+  font-family: HKGrotesk-Bold;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+span {
+  display: block;
+}
+
+button {
+  border: none;
+}
+
+.header {
+  color: var(--white-color);
+}
+
+/* .btn {
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  filter: brightness(90%);
+  transition: all 0.3s;
+} */
+
+/* animation */
+@keyframes dropDown {
+  from {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
