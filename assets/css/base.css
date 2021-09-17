@@ -3,6 +3,8 @@
   --white-color: #fff;
   --black-color: #000;
   --grey-color: #7c7c7c;
+  --header-height: 60px;
+  --header__ad-height: 40px;
 }
 
 * {
@@ -25,6 +27,11 @@
 @font-face {
   font-family: HKGrotesk-semiBold;
   src: url(../fonts/hkgrotesk/OTF/HKGrotesk-SemiBold.otf);
+}
+
+@font-face {
+  font-family: HKGrotesk-Nor;
+  src: url(../fonts/hkgrotesk/OTF/HKGrotesk-Regular.otf);
 }
 html {
   font-size: 62.5%;
@@ -73,4 +80,58 @@ button {
     opacity: 1;
     transform: scaleY(1);
   }
+}
+
+@keyframes pullup {
+  from {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+}
+
+@keyframes growX {
+  from {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  to {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+/* body */
+.author {
+  color: #999;
+  font-size: 1.2rem;
+}
+
+.heading {
+  color: var(--white-color);
+  line-height: 24px;
+}
+
+.img {
+  width: 100%;
+}
+
+.content__label {
+  display: flex;
+  margin-bottom: 20px;
+}
+.content__label-name {
+  font-size: 3.2rem;
+  line-height: 3.6rem;
+  color: var(--main-color);
+}
+.content__label-icon {
+  color: var(--main-color);
+  padding-left: 12px;
+  font-size: 2.6rem;
+  /* line-height: 3.6rem; */
+  margin: auto 0;
 }

@@ -39,6 +39,16 @@
   cursor: pointer;
   transition: color 0.3s;
 }
+/* 
+.navbar__option::before {
+  content: "";
+  position: sticky;
+  top: calc((100% / 2) + 5px);
+  left: calc(50% - 7px);
+  border: 14px solid;
+  border-color: transparent transparent #fff transparent;
+  z-index: 3;
+} */
 
 .navbar__option-link {
   color: #636363;
@@ -59,6 +69,7 @@
 
 .navbar__option:hover .navbar__option-icon {
   transform: rotate(180deg);
+  color: var(--main-color);
   transition: transform 0.3s;
 }
 
@@ -71,9 +82,11 @@
   margin: 0 auto;
   background-color: rgba(28, 28, 28, 0.8);
   backdrop-filter: blur(30px);
-  padding: 40px 30px 20px !important;
+  padding: 30px 30px 20px !important;
   border-radius: 4px;
   z-index: 3;
+  animation: dropDown ease 0.3s;
+  transform-origin: top;
 }
 
 .subnav::before {
@@ -87,6 +100,7 @@
 
 .subnav__list {
   position: relative;
+  padding-top: 10px;
 }
 
 .subnav__list::before {
@@ -96,7 +110,7 @@
   height: 2px;
   width: 100%;
   background-color: var(--main-color);
-  top: -10px;
+  top: 0px;
   border-radius: 10px;
   opacity: 0.2;
   transition: opacity ease 0.3s;
@@ -106,6 +120,8 @@
   background-color: var(--main-color);
   box-shadow: 0 4px 12px -4px rgba(0, 212, 159, 0.5);
   transition: opacity ease 0.3s;
+  animation: growX ease 0.5s;
+  transform-origin: left;
   opacity: 1;
 }
 
@@ -115,15 +131,70 @@
   text-align: left;
   color: var(--white-color);
   font-family: HKGrotesk-Med;
-  transition: color ease 0.2s;
+  transition: all ease 0.2s;
 }
 .subnav__item-link:hover {
   color: var(--main-color);
-  transition: color ease 0.2s;
+  transition: all ease 0.2s;
+  transform: scale(1.05);
+  margin-left: 10px;
 }
 
 .subnav__item-all {
   color: var(--main-color);
+}
+
+.subnav__social {
+  display: flex;
+  /* justify-content: center; */
+  align-content: center;
+}
+
+.subnav__social-name {
+  display: flex;
+  font-size: 1.6rem;
+  font-family: HKGrotesk-Med;
+}
+
+.subnav__item-heading {
+  text-align: left;
+  padding: 10px 0;
+  font-size: 1.6rem;
+  opacity: 0.7;
+  user-select: none;
+  cursor: default;
+}
+
+.subnav__item-icon {
+  width: 20px;
+  height: 20px;
+  font-size: 1.6rem;
+  margin-right: 12px;
+  display: flex;
+}
+
+.subnav__item-ad {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  padding: 10px 16px;
+  margin-top: 10px;
+  border: 2px solid var(--main-color);
+  border-radius: 4px;
+  background-color: var(--black-color);
+}
+
+.subnav__item-ad:hover .subnav__item-ad-icon {
+  transform: translateX(6px);
+  transition: transform 0.2s;
+}
+
+.subnav__item-ad-link {
+  color: var(--white-color);
+}
+
+.subnav__item-ad-icon {
+  transition: transform 0.2s;
 }
 
 .header__search {
@@ -138,20 +209,29 @@
 
 .header__search:focus .header__search-bar {
   display: flex;
+  transform-origin: right;
+  animation: growX ease 0.3s;
 }
 
 .header__search:focus {
   background-color: #333;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 
-.header__search:hover .header__search-icon,
-.header__search-close:hover {
+.header__search:hover .header__search-icon {
   color: var(--main-color);
+  transition: color ease 0.2s;
+}
+
+.header__search-close:hover {
+  color: red;
 }
 
 .header__search-icon {
   color: var(--white-color);
   font-size: 1.8rem;
+  transition: color ease 0.2s;
 }
 
 .header__search-bar {
@@ -176,7 +256,7 @@
   background: linear-gradient(
     to right,
     rgba(0, 0, 0, 0) 0%,
-    var(--black-color) 25%,
+    var(--black-color) 20%,
     var(--black-color) 100%
   );
 }
@@ -188,6 +268,8 @@
   outline: none;
   padding-left: 10px;
   color: var(--white-color);
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
 }
 
 .header__search-form::placeholder {
@@ -199,6 +281,7 @@
   font-size: 1.6rem;
   padding: 12px;
   background-color: #333;
+  border-radius: 4px;
 }
 
 /* .header__search-close:focus .header__search-bar {
@@ -215,10 +298,12 @@
   line-height: 40px;
   background-color: #151515;
   border-radius: 4px;
+  transition: opacity ease 0.2s;
 }
 
 .header__deals:hover {
   opacity: 0.75;
+  transition: opacity ease 0.2s;
 }
 
 .header__deals-icon {
@@ -259,8 +344,15 @@
 .header__ad-icon:first-child {
   margin-right: 10px;
 }
+
 .header__ad-icon:last-child {
   margin-left: 20px;
+  transition: transform 0.2s;
+}
+
+.header__ad:hover .header__ad-icon:last-child {
+  transform: translateX(4px);
+  transition: transform 0.2s;
 }
 
 .header__ad-title {
