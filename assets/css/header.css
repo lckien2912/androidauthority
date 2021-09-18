@@ -27,7 +27,26 @@
 }
 
 .navbar__option:hover .subnav {
-  display: block !important;
+  display: block;
+  transform: scaleY(1);
+  transition: transform 0.3s;
+}
+
+.subnav {
+  position: absolute;
+  top: 102%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background-color: rgba(28, 28, 28, 0.8);
+  backdrop-filter: blur(30px);
+  padding: 30px 30px 20px !important;
+  border-radius: 4px;
+  z-index: 3;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.1s;
+  box-shadow: 1px 1px 0 #333;
 }
 
 .navbar__option {
@@ -40,16 +59,6 @@
   cursor: pointer;
   transition: color 0.3s;
 }
-/* 
-.navbar__option::before {
-  content: "";
-  position: sticky;
-  top: calc((100% / 2) + 5px);
-  left: calc(50% - 7px);
-  border: 14px solid;
-  border-color: transparent transparent #fff transparent;
-  z-index: 3;
-} */
 
 .navbar__option-link {
   color: #636363;
@@ -72,24 +81,6 @@
   transform: rotate(180deg);
   color: var(--main-color);
   transition: transform 0.3s;
-}
-
-.subnav {
-  display: none !important;
-  position: absolute;
-  top: 102%;
-  left: 0;
-  right: 0;
-  height: 39vh;
-  margin: 0 auto;
-  background-color: rgba(28, 28, 28, 0.8);
-  backdrop-filter: blur(30px);
-  padding: 30px 30px 20px !important;
-  border-radius: 4px;
-  z-index: 3;
-  animation: dropDown ease 0.3s;
-  transform-origin: top;
-  box-shadow: 1px 1px 0 #333;
 }
 
 .subnav::before {
@@ -120,7 +111,6 @@
 }
 
 .subnav__list:hover::before {
-  box-shadow: 0 4px 12px -4px rgba(0, 212, 159, 0.5);
   transition: opacity ease 0.3s;
   animation: growX ease 0.5s;
   transform-origin: left;
@@ -133,11 +123,11 @@
   text-align: left;
   color: var(--white-color);
   font-family: HKGrotesk-Med;
-  transition: all ease 0.2s;
+  transition: all ease 0.15s;
 }
 .subnav__item-link:hover {
   color: var(--main-color);
-  transition: all ease 0.2s;
+  transition: all ease 0.15s;
   transform: scale(1.05);
   margin-left: 10px;
 }
@@ -148,7 +138,6 @@
 
 .subnav__social {
   display: flex;
-  /* justify-content: center; */
   align-content: center;
 }
 
@@ -200,30 +189,26 @@
 }
 
 .header__search {
+  position: relative;
   width: 40px;
   height: 40px;
   top: 10px;
   background-color: transparent;
-  position: relative;
   margin-right: 18px;
-  cursor: pointer;
 }
 
-.header__search:focus .header__search-bar {
+.header__search-hider:checked ~ .header__search-bar {
   display: flex;
-  transform-origin: right;
-  animation: growX ease 0.3s;
+  transition: all 0.2s;
+  transform: scaleX(1);
 }
 
-.header__search:focus {
+.header__search-hider:checked ~ .header__search-icon {
   background-color: #333;
+  animation: growX ease 0.3s;
+  transition: right;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
-}
-
-.header__search:hover .header__search-icon {
-  color: var(--main-color);
-  transition: color ease 0.2s;
 }
 
 .header__search-close:hover {
@@ -231,22 +216,24 @@
 }
 
 .header__search-icon {
-  color: var(--white-color);
-  font-size: 1.8rem;
+  font-size: 2rem;
   transition: color ease 0.2s;
+  padding: 7px 6px 9px;
+  cursor: pointer;
 }
 
 .header__search-bar {
   position: absolute;
-  right: 40px;
   top: 0px;
-  display: flex;
+  left: -280px;
   height: 40px;
   width: 280px;
   justify-content: space-between;
   z-index: 2;
   background-color: var(--black-color);
-  display: none;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: all 0.2s;
 }
 
 .header__search-bar::before {
@@ -276,6 +263,8 @@
 
 .header__search-form::placeholder {
   outline: none;
+  font-size: 1.4rem;
+  font-family: HKGrotesk-SemiBold;
 }
 
 .header__search-close {
@@ -284,11 +273,8 @@
   padding: 12px;
   background-color: #333;
   border-radius: 4px;
+  cursor: pointer;
 }
-
-/* .header__search-close:focus .header__search-bar {
-  display: none;
-} */
 
 .header__deals {
   display: block;
@@ -360,3 +346,60 @@
 .header__ad-title {
   font-size: 1.4rem;
 }
+
+/* .theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+}
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  background-color: #999;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+
+.slider:before {
+  background-color: white;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: #eee;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+} */

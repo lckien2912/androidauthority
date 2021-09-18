@@ -60,6 +60,7 @@
   line-height: 3.6rem;
   padding-top: 15px;
 }
+
 .intro__main-content-abstract {
   padding-top: 10px;
   font-size: 2rem;
@@ -110,18 +111,35 @@
   font-size: 1.8rem;
   max-width: 92%;
 }
+
 .sub__content-detail {
   display: flex;
-}
-.sub__content-author {
-}
-.sub__content-postedtime {
 }
 
 .sub__content-img {
   height: 80px;
   width: auto;
   background-size: auto;
+}
+
+.sub__content-type-2 {
+  display: flex;
+}
+
+.sub__content2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sub__content2-heading {
+  margin-right: 30px;
+  font-size: 2.4rem;
+  line-height: 3rem;
+}
+
+.sub__content-img2 {
+  height: 155px;
 }
 
 .main__content-img {

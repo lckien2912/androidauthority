@@ -524,21 +524,23 @@
                 </div>
           </button>
         </div>
-        <button class="header__search">
-          <input type="checkbox" hidden id="search-hider" class="">
-          <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
-          <lord-icon
-              src="https://cdn.lordicon.com/msoeawqm.json"
-              trigger="loop"
-              colors="primary:#ffffff,secondary:#08a88a"
-              stroke="100"
-              style="width:30px;height:30px">
-          </lord-icon>
-          <!-- <i class="ti-search header__search-icon"></i> -->
+        <button for="search-hider"class="header__search">
+          <input type="checkbox" hidden id="search-hider" class="header__search-hider header__search-close">
+          
+          <label for="search-hider" class="header__search-hider header__search-icon">
+            <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
+            <lord-icon
+                src="https://cdn.lordicon.com/msoeawqm.json"
+                trigger="loop"
+                colors="primary:#ffffff,secondary:#08a88a"
+                stroke="100"
+                style="width:30px;height:30px">
+            </lord-icon>
+          </label>
           <div class="header__search-bar">
-            <div class="ti-close header__search-close"></div>
+            <label for="search-hider" class="ti-close header__search-close"></label>
             <input
-              type="search"
+              type="text"
               placeholder="Search"
               class="header__search-form"
             />
@@ -548,6 +550,12 @@
           >Best daily deals
           <i class="fas fa-shopping-cart header__deals-icon"></i>
         </a>
+        <!-- <div class="theme-switch-wrapper">
+          <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+          </label>
+        </div> -->
         <div class="header__ad">
           <a href="" class="header__ad-content">
             <i class="fas fa-shopping-cart header__ad-icon"></i>
@@ -568,12 +576,12 @@
                 <div class="row sm-gutters">
                   <div class="col pc-3 intro__sub-content">
                     <a href="" class="intro__sub-content-item post">
-                      <img src="./assets/img/body/SS-Z-flip-3.webp" alt="" class="intro__sub-content-img">
+                      <img src="./assets/img/body/SS-Z-flip-3.webp" alt="" class="intro__sub-content-img img">
                       <div class="intro__sub-content-heading heading">Samsung Galaxy Z Flip 3 second opinion: This foldable has heart</div>
                       <div class="intro__sub-content-author">Dhruv Bhutani</div>
                     </a>
                     <a href="" class="intro__sub-content-item post">
-                      <img src="./assets/img/body/iP13.webp" alt="" class="intro__sub-content-img">
+                      <img src="./assets/img/body/iP13.webp" alt="" class="intro__sub-content-img img">
                       <div class="intro__sub-content-heading heading">Apple iPhone 13 buyer's guide: Everything you need to know</div>
                       <div class="intro__sub-content-author">C. Scott Brown</div>
                     </a>
@@ -588,12 +596,12 @@
                   </div>
                   <div class="col pc-3 intro__sub-content">
                     <a href="" class="intro__sub-content-item post">
-                      <img src="./assets/img/body/s20ultra.webp" alt="" class="intro__sub-content-img">
+                      <img src="./assets/img/body/s20ultra.webp" alt="" class="intro__sub-content-img img">
                       <div class="intro__sub-content-heading heading">7 more marketing tricks phone brands should stop using right now</div>
                       <div class="intro__sub-content-author">Hadlee Simons</div>
                     </a>
                     <a href="" class="intro__sub-content-item post">
-                      <img src="./assets/img/body/SS-UI.webp" alt="" class="intro__sub-content-img">
+                      <img src="./assets/img/body/SS-UI.webp" alt="" class="intro__sub-content-img img">
                       <div class="intro__sub-content-heading heading">Samsung opens One UI 4 beta: See availability, and new features</div>
                       <div class="intro__sub-content-author">Adamya Sharma</div>
                     </a>
@@ -603,10 +611,12 @@
               </div>
               <div class="content__main">
                 <div class="row content__section">
-                  <div class="col pc-6">
+                  <div class="col pc-6 section">
                     <div class="content__label">
-                      <a href="" class="content__label-name">News</a>
-                      <i class="fas fa-arrow-right content__label-icon"></i>
+                      <a href="" class="content__label-name">News
+
+                        <i class="fas fa-arrow-right content__label-icon"></i>
+                      </a>
                     </div>
                     <a href="" class="sub__content-type-1 post">
                         <div class="sub__content">
@@ -719,11 +729,14 @@
                         </div>
                         <img src="./assets/img/body/OnePlus-9-Pro-vs-OnePlus-9.webp" alt="" class="sub__content-img img">
                     </a>
+                    <a href="" class="load-more">Load More</a>
                   </div>
-                  <div class="col pc-6">
+                  <div class="col pc-6 section">
                     <div class="content__label">
-                      <a href="" class="content__label-name">Features</a>
-                      <i class="fas fa-arrow-right content__label-icon"></i>
+                      <a href="" class="content__label-name">Features
+
+                        <i class="fas fa-arrow-right content__label-icon"></i>
+                      </a>
                     </div>
                     <a href="" class="main__content post">
                       <div class="main__content-img" style="background-image: url(/assets/img/body/OnePlus-9R-in-hand-focus-on-camera-770x433.jpg.webp);">
@@ -734,8 +747,52 @@
                           <div class="main__content-postedtime time">10 hours ago</div>
                         </div>
                       </div>
-                        
                     </a>
+                    <a href="" class="sub__content-type-2 post">
+                      <div class="sub__content">
+                          <div class="sub__content2-heading heading">The best iPhone 13 alternatives: 7 phones to consider before you buy</div>
+                          <div class="sub__content-detail">
+                            <div class="sub__content-author author">By Hadlee Simons</div>
+                            <div class="dot">.</div>
+                            <div class="sub__content-postedtime time">15 hours ago</div>
+                          </div>
+                      </div>
+                      <img src="./assets/img/body/iPhone-13-Pro-series-real-world-300w-170h.jpg.webp" alt="" class="sub__content-img2 img">
+                    </a>
+                    <a href="" class="sub__content-type-2 post">
+                      <div class="sub__content">
+                          <div class="sub__content2-heading heading">Google Tensor vs Snapdragon 888: How the Pixel 6's chip is shaping up</div>
+                          <div class="sub__content-detail">
+                            <div class="sub__content-author author">By Robert Triggs</div>
+                            <div class="dot">.</div>
+                            <div class="sub__content-postedtime time">17 hours ago</div>
+                          </div>
+                      </div>
+                      <img src="./assets/img/body/Google-Tensor-SoC-chip-770w-433h.jpg.webp" alt="" class="sub__content-img2 img">
+                    </a>
+                    <a href="" class="sub__content-type-2 post">
+                      <div class="sub__content">
+                          <div class="sub__content2-heading heading">Google Pixel 6: Everything we know so far (Updated: September 16)</div>
+                          <div class="sub__content-detail">
+                            <div class="sub__content-author author">By C. Scott Brown</div>
+                            <div class="dot">.</div>
+                            <div class="sub__content-postedtime time">18 hours ago</div>
+                          </div>
+                      </div>
+                      <img src="./assets/img/body/google-pixel-6-pro-camera-300x170.jpg.webp" alt="" class="sub__content-img2 img">
+                    </a>
+                    <a href="" class="sub__content-type-2 post">
+                      <div class="sub__content">
+                          <div class="sub__content2-heading heading">Apple iPhone 13 buyer's guide: Everything you need to know</div>
+                          <div class="sub__content-detail">
+                            <div class="sub__content-author author">By C. Scott Brown</div>
+                            <div class="dot">.</div>
+                            <div class="sub__content-postedtime time">18 hours ago</div>
+                          </div>
+                      </div>
+                      <img src="./assets/img/body/iP13.webp" alt="" class="sub__content-img2 img">
+                    </a>
+                    <a href="" class="load-more">Load More</a>
                   </div>
                 </div>
               </div>
@@ -746,4 +803,28 @@
       <div class="footer"></div>
     </div>
   </body>
+  <!-- <script>
+    const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+const currentTheme = localStorage.getItem('theme');
+
+if (currentTheme) {
+    document.documentElement.setAttribute('data-theme', currentTheme);
+
+    if (currentTheme === 'dark') {
+        toggleSwitch.checked = true;
+    }
+}
+
+function switchTheme(e) {
+    if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+    } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+    }
+}
+
+toggleSwitch.addEventListener('change', switchTheme, false);
+  </script> -->
 </html>

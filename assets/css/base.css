@@ -7,11 +7,15 @@
   --header__ad-height: 40px;
 }
 
+[data-theme="dark"] {
+  --white-color: #000;
+  --black-color: #fff;
+}
+
 * {
   top: 0;
-  right: 0;
   left: 0;
-  bottom: 0;
+  right: 0;
   margin: 0;
   padding: 0;
   box-sizing: inherit;
@@ -65,15 +69,6 @@ button {
   color: var(--white-color);
 }
 
-/* .btn {
-  transition: all 0.3s;
-}
-
-.btn:hover {
-  filter: brightness(90%);
-  transition: all 0.3s;
-} */
-
 /* animation */
 @keyframes dropDown {
   from {
@@ -108,9 +103,23 @@ button {
   }
 }
 
+@keyframes hideX {
+  from {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  to {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+}
+
 /* body */
+.section {
+  margin-bottom: 60px;
+}
 .author {
-  color: var(--white-color);
+  color: rgb(221, 221, 221);
   font-size: 1.2rem;
   text-shadow: 1px 1px 1px #333;
 }
@@ -143,16 +152,30 @@ button {
   display: flex;
   margin-bottom: 20px;
 }
+
 .content__label-name {
   font-size: 3.2rem;
   line-height: 3.6rem;
   color: var(--main-color);
+  transition: transform 0.2s;
 }
+
 .content__label-icon {
   color: var(--main-color);
-  padding-left: 12px;
+  padding-left: 8px;
   font-size: 2.6rem;
   margin: auto 0;
+  transition: transform 0.2s;
+}
+
+.content__label-name:hover {
+  transform: translateX(4px);
+  transition: transform 0.2s;
+}
+
+.content__label-name:hover .content__label-icon {
+  transform: translateX(6px);
+  transition: transform 0.2s;
 }
 
 .post {
@@ -169,4 +192,21 @@ button {
 .post:hover {
   transform: scale(1.02);
   transition: transform 0.3s;
+}
+
+.load-more {
+  font-size: 1.8rem;
+  padding: 20px 0;
+  width: 100%;
+  background-color: var(--main-color);
+  color: var(--black-color);
+  text-align: center;
+  margin-top: 15px;
+  border-radius: 4px;
+  transition: opacity ease 0.3s;
+}
+
+.load-more:hover {
+  opacity: 0.8;
+  transition: opacity ease 0.3s;
 }
