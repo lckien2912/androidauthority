@@ -5,7 +5,8 @@
   background-color: var(--black-color);
   padding: 0 40px;
   transition: ease 0.3s;
-  position: relative;
+  position: fixed;
+  z-index: 10;
 }
 
 .header .header__logo {
@@ -79,6 +80,7 @@
   top: 102%;
   left: 0;
   right: 0;
+  height: 39vh;
   margin: 0 auto;
   background-color: rgba(28, 28, 28, 0.8);
   backdrop-filter: blur(30px);
@@ -87,6 +89,7 @@
   z-index: 3;
   animation: dropDown ease 0.3s;
   transform-origin: top;
+  box-shadow: 1px 1px 0 #333;
 }
 
 .subnav::before {
@@ -117,7 +120,6 @@
 }
 
 .subnav__list:hover::before {
-  background-color: var(--main-color);
   box-shadow: 0 4px 12px -4px rgba(0, 212, 159, 0.5);
   transition: opacity ease 0.3s;
   animation: growX ease 0.5s;
