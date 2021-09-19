@@ -196,7 +196,7 @@ button {
 
 .load-more {
   font-size: 1.8rem;
-  padding: 20px 0;
+  padding: 12px 0;
   width: 100%;
   background-color: var(--main-color);
   color: var(--black-color);
