@@ -34,7 +34,7 @@
 
 .subnav {
   position: absolute;
-  top: 102%;
+  top: calc(100% + 3px);
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -58,6 +58,28 @@
   padding: 0 20px;
   cursor: pointer;
   transition: color 0.3s;
+}
+
+.navbar__option-button {
+  position: relative;
+}
+
+.navbar__option-button::before {
+  content: "";
+  position: absolute;
+  border-top: 20px solid;
+  border-right: 20px solid;
+  border-color: rgba(28, 28, 28, 0.8);
+  backdrop-filter: blur(30px);
+  transform: rotate(45deg);
+  top: calc(100% + 13px);
+  left: calc(50% - 5px);
+  z-index: 2;
+  display: none;
+}
+
+.navbar__option:hover .navbar__option-button::before {
+  display: block;
 }
 
 .navbar__option-link {
@@ -122,9 +144,10 @@
   padding: 10px 0;
   text-align: left;
   color: var(--white-color);
-  font-family: HKGrotesk-Med;
+  font-family: HKGrotesk-Nor;
   transition: all ease 0.15s;
 }
+
 .subnav__item-link:hover {
   color: var(--main-color);
   transition: all ease 0.15s;
@@ -134,6 +157,7 @@
 
 .subnav__item-all {
   color: var(--main-color);
+  font-family: HKGrotesk-Med;
 }
 
 .subnav__social {
@@ -173,6 +197,7 @@
   border: 2px solid var(--main-color);
   border-radius: 4px;
   background-color: var(--black-color);
+  box-shadow: 0 4px 12px -4px rgb(0 212 159 / 50%);
 }
 
 .subnav__item-ad:hover .subnav__item-ad-icon {
@@ -205,7 +230,7 @@
 
 .header__search-hider:checked ~ .header__search-icon {
   background-color: #333;
-  animation: growX ease 0.3s;
+  animation: growX ease 0.1s;
   transition: right;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
@@ -217,9 +242,16 @@
 
 .header__search-icon {
   font-size: 2rem;
-  transition: color ease 0.2s;
+  transition: all 0.2s;
   padding: 7px 6px 9px;
   cursor: pointer;
+}
+
+.header__search-icon:hover {
+  background-color: #333;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  transition: all 0.2s;
 }
 
 .header__search-bar {
@@ -309,7 +341,7 @@
   box-shadow: 0 4px 12px -4px rgba(0, 212, 159, 0.5);
   user-select: none;
   cursor: pointer;
-  z-index: 2;
+  z-index: 1;
 }
 
 .header__ad-content {

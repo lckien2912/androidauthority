@@ -175,7 +175,7 @@ button {
 
 .content__label-name:hover .content__label-icon {
   transform: translateX(6px);
-  transition: transform 0.2s;
+  transition: transform 0.2s alternate infinite;
 }
 
 .post {
@@ -204,6 +204,7 @@ button {
   margin-top: 15px;
   border-radius: 4px;
   transition: opacity ease 0.3s;
+  box-shadow: 0 4px 12px -4px rgba(0, 212, 159, 0.5);
 }
 
 .load-more:hover {
