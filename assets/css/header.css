@@ -133,7 +133,7 @@
 }
 
 .subnav__list:hover::before {
-  transition: opacity ease 0.3s;
+  transition: animation ease 0.3s;
   animation: growX ease 0.5s;
   transform-origin: left;
   opacity: 1;
@@ -249,15 +249,14 @@
 
 .header__search-icon:hover {
   background-color: #333;
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
+  border-radius: 4px;
   transition: all 0.2s;
 }
 
 .header__search-bar {
   position: absolute;
   top: 0px;
-  left: -280px;
+  left: -276px;
   height: 40px;
   width: 280px;
   justify-content: space-between;
@@ -313,17 +312,18 @@
   align-self: center;
   font-size: 1.4rem;
   color: var(--white-color);
-  padding: 0 24px;
+  padding: 0 20px 0 24px;
   height: 40px;
   line-height: 40px;
   background-color: #151515;
   border-radius: 4px;
-  transition: opacity ease 0.2s;
+
+  transition: transform 0.2s;
 }
 
 .header__deals:hover {
-  opacity: 0.75;
-  transition: opacity ease 0.2s;
+  opacity: 0.8;
+  transition: opacity 0.2s;
 }
 
 .header__deals-icon {

@@ -91,6 +91,16 @@ button {
     transform: scaleY(1);
   }
 }
+@keyframes hideY {
+  from {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+}
 
 @keyframes growX {
   from {
@@ -196,7 +206,7 @@ button {
 
 .load-more {
   font-size: 1.8rem;
-  padding: 12px 0;
+  padding: 10px 0;
   width: 100%;
   background-color: var(--main-color);
   color: var(--black-color);
