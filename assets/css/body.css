@@ -55,6 +55,10 @@
   font-size: 2.4rem;
   line-height: 3.6rem;
   padding-top: 15px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .intro__main-content-abstract {
@@ -63,6 +67,10 @@
   line-height: 2.6rem;
   color: var(--white-color);
   font-family: HKGrotesk-Nor;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .intro__main-content-author {
@@ -123,6 +131,10 @@
 .sub__content-heading {
   font-size: 1.8rem;
   max-width: 92%;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .sub__content-detail {
@@ -149,6 +161,10 @@
   margin-right: 30px;
   font-size: 2.4rem;
   line-height: 3rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .sub__content-img2 {
@@ -160,6 +176,7 @@
   background-clip: padding-box;
   height: 330px;
   background-size: contain;
+  background-repeat: no-repeat;
   padding: 30px;
   width: 100%;
   display: flex;
@@ -173,6 +190,10 @@
   font-size: 3.2rem;
   line-height: 4rem;
   margin-bottom: 12px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .content__subscribe {
@@ -296,6 +317,7 @@
 }
 
 .content__poll-submit {
+  color: var(--white-color);
   width: 25%;
   margin: 10px 0;
   padding: 12px 0;
@@ -313,4 +335,49 @@
 .content__poll-submit:hover {
   transition: opacity 0.3s;
   opacity: 0.8;
+}
+
+.content__video {
+  height: 100%;
+  padding: 15px 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.content__video-img {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.content__video-icon {
+  width: 45px;
+  font-size: 4rem;
+  position: absolute;
+  z-index: 2;
+  top: calc(var(--video-height) / 2);
+  left: calc(50% - 20px);
+  color: rgba(0, 0, 0, 0.6);
+  transition: color 0.2s;
+}
+.content__video-icon:hover {
+  transition: color 0.2s;
+
+  color: rgba(255, 0, 0, 0.9);
+}
+
+.content__slider-heading {
+  margin-top: 4px;
+  line-height: 20px;
+  /* height: 40px; */
+  font-size: 1.8rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.content__video:hover .content__slider-heading {
+  color: var(--main-color);
 }
