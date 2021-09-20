@@ -119,7 +119,7 @@
   padding-top: 10px;
 }
 
-.subnav__list::before {
+.subnav__list::after {
   content: "";
   position: absolute;
   left: 0;
@@ -129,14 +129,26 @@
   top: 0px;
   border-radius: 10px;
   opacity: 0.2;
-  transition: opacity ease 0.3s;
+}
+
+.subnav__list::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: var(--main-color);
+  top: 0px;
+  border-radius: 10px;
+  transform-origin: left;
+  transition: transform ease 0.3s;
+  transform: scaleX(0);
 }
 
 .subnav__list:hover::before {
-  transition: animation ease 0.3s;
-  animation: growX ease 0.5s;
+  transition: transform ease 0.5s;
+  transform: scaleX(1);
   transform-origin: left;
-  opacity: 1;
 }
 
 .subnav__item-link {
