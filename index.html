@@ -24,6 +24,17 @@
   <body>
     <div class="AndroidAuthority">
       <div class="header">
+        <input type="checkbox" hidden id="navbar__checkbox" class="navbar__menu">
+        <label for="navbar__checkbox"class="navbar__menu">
+          <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
+          <lord-icon
+              src="https://cdn.lordicon.com/jtqpkhoh.json"
+              trigger="morph-two-way"
+              colors="primary:#ffffff,secondary:#08a88a"
+              style="width:60px;height:60px"
+              class="navbar__menu">
+          </lord-icon>
+        </label>
         <a href="" class="header__logo">
           <svg class="header__logo-img" viewBox="0 0 2105.5 269.9">
             <path
@@ -41,13 +52,25 @@
           </svg>
         </a>
         <div class="header__navbar">
+          <a href="" class="navbar__deals"
+          >Best daily deals
+            <script src="https://cdn.lordicon.com/libs/mssddfmo/  lord-icon-2.1.0.js"></script>
+            <lord-icon
+                src="https://cdn.lordicon.com/slkvcfos.json"
+                trigger="loop"
+                colors="primary:#ffffff,secondary:#16c79e"
+                style="width:32px;height:32px; margin-left: 8px;">
+            </lord-icon>
+          </a>
           <button class="navbar__option">
-            <div class="navbar__option-button">
-
-              The best <i class="fas fa-sort-down navbar__option-icon"></i>
-            </div>
-            <div class="subnav grid wide">
-              <div class="row">
+            <input type="checkbox" hidden id="navbar__option-checkbox" class="navbar__option-button">
+            <label for="navbar__option-checkbox" class="navbar__option-button">
+              The best
+              <i class="fas fa-sort-down navbar__option-icon"></i>
+              <i class="fas fa-chevron-down navbar__devices-icon"></i>
+            </label>
+            <div class="subnav">
+              <div class="row subnav-devices">
                 <div class="subnav__list-container col pc-3">
                   <div class="subnav__list">
                     <a href="" class="subnav__item-link">Best Android phones</a>
@@ -126,12 +149,13 @@
             </div>
           </button>
           <button class="navbar__option">
-            <div class="navbar__option-button">
-
+            <input type="checkbox" hidden id="navbar__option-checkbox2" class="navbar__option-button">
+            <label for="navbar__option-checkbox2" class="navbar__option-button">
               Reviews
               <i class="fas fa-sort-down navbar__option-icon"></i>
-            </div>
-            <div class="subnav grid wide">
+              <i class="fas fa-chevron-down navbar__devices-icon"></i>
+            </label>
+            <div class="subnav">
               <div class="row">
                 <div class="subnav__list-container col pc-3">
                   <div class="subnav__list">
@@ -214,11 +238,13 @@
             </div>
           </button>
           <button class="navbar__option">
-            <div class="navbar__option-button">
-
-              Apps & games <i class="fas fa-sort-down navbar__option-icon"></i>
-            </div>
-            <div class="subnav grid wide">
+            <input type="checkbox" hidden id="navbar__option-checkbox3" class="navbar__option-button">
+            <label for="navbar__option-checkbox3" class="navbar__option-button">
+              Apps & games 
+              <i class="fas fa-sort-down navbar__option-icon"></i>
+              <i class="fas fa-chevron-down navbar__devices-icon"></i>
+            </label>
+            <div class="subnav">
               <div class="row">
                 <div class="subnav__list-container col pc-3">
                   <div class="subnav__list">
@@ -313,10 +339,13 @@
             </div>
           </button>
           <button class="navbar__option">
-            <div class="navbar__option-button">
-              Buyer's guides <i class="fas fa-sort-down navbar__option-icon"></i>
-            </div>
-            <div class="subnav grid wide">
+            <input type="checkbox" hidden id="navbar__option-checkbox4" class="navbar__option-button">
+            <label for="navbar__option-checkbox4" class="navbar__option-button">
+              Buyer's guides
+              <i class="fas fa-sort-down navbar__option-icon"></i>
+              <i class="fas fa-chevron-down navbar__devices-icon"></i>
+            </label>
+            <div class="subnav">
               <div class="row">
                 <div class="subnav__list-container col pc-3">
                   <div class="subnav__list">
@@ -393,11 +422,13 @@
             </div>
           </button>
           <button class="navbar__option">
-            <div class="navbar__option-button">
-
-              Phone plans <i class="fas fa-sort-down navbar__option-icon"></i>
-            </div>
-            <div class="subnav grid wide">
+            <input type="checkbox" hidden id="navbar__option-checkbox5" class="navbar__option-button">
+            <label for="navbar__option-checkbox5" class="navbar__option-button">
+              Phone plans
+              <i class="fas fa-sort-down navbar__option-icon"></i>
+              <i class="fas fa-chevron-down navbar__devices-icon"></i>
+            </label>
+            <div class="subnav">
               <div class="row">
                 <div class="subnav__list-container col pc-3">
                   <div class="subnav__list">
@@ -473,12 +504,14 @@
             <a href="" class="navbar__option-link">News</a>
           </button>
           <button class="navbar__option">
-            <div class="navbar__option-button">
+            <input type="checkbox" hidden id="navbar__option-checkbox6" class="navbar__option-button">
+            <label for="navbar__option-checkbox6" class="navbar__option-button">
               More <i class="fas fa-sort-down navbar__option-icon"></i>
-            </div>
-            <div class="subnav grid wide">
+              <i class="fas fa-chevron-down navbar__devices-icon"></i>
+            </label>
+            <div class="subnav">
               <div class="row">
-                <div class="subnav__list-container col pc-4">
+                <div class="subnav__list-container col pc-4 tb-12 mb-12">
                   <div class="subnav__list">
                     <a href="" class="subnav__item-link">Polls</a>
                     <a href="" class="subnav__item-link">Features & opinions</a>
@@ -500,7 +533,7 @@
                     >
                   </div>
                 </div>
-                <div class="subnav__list-container col pc-4">
+                <div class="subnav__list-container col pc-4 tb-12 mb-12">
                   <div class="subnav__list">
                     <h3 class="subnav__item-heading">SOCIAL</h3>
                     <a href="https://www.facebook.com/androidauthority" class="subnav__item-link subnav__social">
@@ -522,7 +555,7 @@
                       <div class="subnav__social-name">Email</div></a>
                   </div>
                 </div>
-                <div class="subnav__list-container col pc-4">
+                <div class="subnav__list-container col pc-4 tb-0 mb-0">
                   <div class="subnav__list">
                     <a href="" class="subnav__item-link"
                       >About</a>
@@ -541,6 +574,7 @@
                   </div>
                 </div>
           </button>
+          
         </div>
         <button for="search-hider"class="header__search">
           <input type="checkbox" hidden id="search-hider" class="header__search-hider header__search-close">
@@ -589,12 +623,12 @@
       <div class="body">
         <div class="grid wide">
           <div class="row">
-            <div class="col pc-12">
+            <div class="col pc-12 tb-12 mb-12">
               <p class="intro">Links on Android Authority may earn us a commission.
               <a href="">Learn more.</a></p>
               <div class="content__intro">
-                <div class="row sm-gutters">
-                  <div class="col pc-3 intro__sub-content">
+                <div class="row sm-gutters content__intro-container">
+                  <div class="col pc-3 tb-12 mb-12 intro__sub-content">
                     <a href="" class="intro__sub-content-item post">
                       <img src="./assets/img/body/SS-Z-flip-3.webp" alt="" class="intro__sub-content-img img">
                       <div class="intro__sub-content-heading heading">Samsung Galaxy Z Flip 3 second opinion: This foldable has heart</div>
@@ -606,7 +640,7 @@
                       <div class="intro__sub-content-author">C. Scott Brown</div>
                     </a>
                   </div>
-                  <div class="col pc-6 intro__main-content">
+                  <div class="col pc-6 tb-12 mb-12 intro__main-content">
                     <a href="" class="intro__main-content-item post">
                       <img src="./assets/img/body/xiaomi11T.webp" alt="" class="img">
                       <div class="intro__main-content-heading heading">Xiaomi 11T Pro review: Lightning-quick charging meets middling cameras</div>
@@ -614,7 +648,7 @@
                       <div class="intro__main-content-author">Eric Zeman</div>
                     </a>
                   </div>
-                  <div class="col pc-3 intro__sub-content">
+                  <div class="col pc-3 tb-12 mb-12 intro__sub-content">
                     <a href="" class="intro__sub-content-item post">
                       <img src="./assets/img/body/s20ultra.webp" alt="" class="intro__sub-content-img img">
                       <div class="intro__sub-content-heading heading">7 more marketing tricks phone brands should stop using right now</div>
@@ -626,12 +660,11 @@
                       <div class="intro__sub-content-author">Adamya Sharma</div>
                     </a>
                   </div>
-                  
                 </div>
               </div>
               <div class="content__main">
                 <div class="row content__section">
-                  <div class="col pc-6 section">
+                  <div class="col pc-6 tb-12 mb-12 section">
                     <div class="content__label">
                       <a href="" class="content__label-name">News
 
@@ -752,7 +785,7 @@
                     <a href="" class="load-more">Load More
                     </a>
                   </div>
-                  <div class="col pc-6 section">
+                  <div class="col pc-6 tb-12 mb-12 section">
                     <div class="content__label">
                       <a href="" class="content__label-name">Features
 
@@ -818,15 +851,15 @@
                   </div>
                 </div>
                 <div class="row content__section">
-                  <div class="col pc-6 section">
+                  <div class="col pc-6 tb-12 mb-12 section">
                     <div class="content__label">
                       <a href="" class="content__label-name">Subscribe to our newsletter
                         <i class="fas fa-arrow-right content__label-icon"></i>
                       </a>
                     </div>
                     <div class="content__subscribe">
-                      <div class="row">
-                        <div class="col pc-2">
+                      <div class="row content__subscribe-top">
+                        <div class="col pc-2 tb-2 mb-2">
                           <div class="content__subscribe-icon">
 
                             <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
@@ -838,23 +871,23 @@
                             </lord-icon>
                           </div>
                         </div>
-                        <div class="col pc-10">
+                        <div class="col pc-10 tb-10 mb-10">
                           <h3 class="content__subscribe-heading heading">The only tech newsletter you need.</h3>
                           <span class="content__subscribe-subheading heading">Join thousands of subscribers and receive a daily newsletter with the most critical headlines.</span>
                         </div>
                       </div>
                       <div class="row">
-                        <div class="col pc-9">
+                        <div class="col pc-9 tb-9 mb-9">
                           <input type="email" required name="" class="content__subscribe-input" placeholder="Email Address">
                         </div>
-                        <div class="col pc-3">
+                        <div class="col pc-3 tb-3 mb-3">
                           <button class="content__subscribe-button">Subscribe</button>
                         </div>
                       </div>
                       <p class="content__subscribe-policy">By singing up, you argree to our <a href="" class="content__subscribe-policy-link">Privacy Policy</a> and European users argree to the data transfer policy.</p>
                     </div>
                   </div>
-                  <div class="col pc-6 section">
+                  <div class="col pc-6 tb-12 mb-12 section">
                     <div class="content__label">
                       <a href="" class="content__label-name">Latest poll
                         <i class="fas fa-arrow-right content__label-icon"></i>
@@ -865,20 +898,20 @@
                       <div class="content__poll-voted">2912 votes</div>
                       <div class="content__poll-ans">
                         <div class="row sm-gutters">
-                          <div class="col pc-6">
+                          <div class="col pc-6 tb-6 mb-6">
                             <button class="content__poll-choice">Samsung Galaxy S21 Ultra</button>
                           </div>
-                          <div class="col pc-6">
+                          <div class="col pc-6 tb-6 mb-6">
                             <button class="content__poll-choice">OnePlus 9 Pro</button>
                           </div>
-                          <div class="col pc-6">
+                          <div class="col pc-6 tb-6 mb-6">
                             <button class="content__poll-choice">Google Pixel 5a</button>
                           </div>
-                          <div class="col pc-6">
+                          <div class="col pc-6 tb-6 mb-6">
                             <button class="content__poll-choice">Samsung Galaxy Note 20 Ultra</button>
                           </div>
                           
-                          <div class="col pc-12">
+                          <div class="col pc-12 tb-12 mb-12">
                             <button class="content__poll-submit">Submit</button>
                           </div>
                         </div>
@@ -887,7 +920,7 @@
                   </div>
                 </div>
                 <div class="row content__section">
-                  <div class="col pc-6 section">
+                  <div class="col pc-6 tb-12 mb-12 section">
                     <div class="content__label">
                       <a href="" class="content__label-name">Reviews
                         <i class="fas fa-arrow-right content__label-icon"></i>
@@ -950,7 +983,7 @@
                     <a href="" class="load-more">Load More
                     </a>
                   </div>
-                  <div class="col pc-6 section">
+                  <div class="col pc-6 tb-12 mb-12 section">
                     <div class="content__label">
                       <a href="" class="content__label-name">The best
                         <i class="fas fa-arrow-right content__label-icon"></i>
@@ -1015,40 +1048,40 @@
                   </div>
                 </div>
                   <div class="row content__section">
-                    <div class="col pc-6 section">
+                    <div class="col pc-6 tb-12 mb-12 section">
                       <div class="content__label">
                         <a href="" class="content__label-name">Our videos
                           <i class="fas fa-arrow-right content__label-icon"></i>
                         </a>
                       </div>
                       <div class="row">
-                        <a href="https://www.youtube.com/watch?v=EXR3Go7U2rk"   class="content__video col pc-6">
+                        <a href="https://www.youtube.com/watch?v=EXR3Go7U2rk"   class="content__video col pc-6 tb-6 mb-6">
                         <img src="https://i.ytimg.com/vi/bl1N2mkmLuY/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCII7FY50KoWVOHBxfbnMMh2YBrqg" alt="" class="content__video-img">
                         <i class="fab fa-youtube content__video-icon"></i>
                         <span class="content__slider-heading heading">Samsung Unpacked - Every announcement in under 10 minutes</span>
                         </a>
-                        <a href="https://www.youtube.com/watch?v=EXR3Go7U2rk"   class="content__video col pc-6">
+                        <a href="https://www.youtube.com/watch?v=EXR3Go7U2rk"   class="content__video col pc-6 tb-6 mb-6">
                         <img src="https://i.ytimg.com/vi/kV67q8zqjVM/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBXulOO6zRQt_2pMU2SFQpfu54zrw" alt="" class="content__video-img">
                         <i class="fab fa-youtube content__video-icon"></i>
 
                         <span class="content__slider-heading heading">Thoughts on the NEW iPhone 13</span>
                         </a>
-                        <a href="https://www.youtube.com/watch?v=EXR3Go7U2rk"   class="content__video col pc-6">
+                        <a href="https://www.youtube.com/watch?v=EXR3Go7U2rk"   class="content__video col pc-6 tb-6 mb-6">
                         <img src="https://i.ytimg.com/vi/EXR3Go7U2rk/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB95yIvQunVhLWuxGxUfWaZLlvSYQ" alt="" class="content__video-img">
                         <i class="fab fa-youtube content__video-icon"></i>
                         <span class="content__slider-heading heading">Samsung Galaxy Z Fold 3 or Flip 3: Which one is right for you?</span>
                         </a>
-                        <a href="https://www.youtube.com/watch?v=EXR3Go7U2rk"   class="content__video col pc-6">
+                        <a href="https://www.youtube.com/watch?v=EXR3Go7U2rk"   class="content__video col pc-6 tb-6 mb-6">
                         <img src="https://i.ytimg.com/vi/GLWxCrOrosg/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBukqPptUFlXo6Ks0xZynvQWLLcYw" alt="" class="content__video-img">
                         <i class="fab fa-youtube content__video-icon"></i>
                         <span class="content__slider-heading heading">Apple was not the first to remove the headphone jack</span>
                         </a>
-                        <a href="https://www.youtube.com/watch?v=EXR3Go7U2rk"   class="content__video col pc-6">
+                        <a href="https://www.youtube.com/watch?v=EXR3Go7U2rk"   class="content__video col pc-6 tb-6 mb-6">
                         <img src="https://i.ytimg.com/vi/vWSxf-djKuI/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBQ6668wHt5BUpg2qD9GzB_qh2H_Q" alt="" class="content__video-img">
                         <i class="fab fa-youtube content__video-icon"></i>
                         <span class="content__slider-heading heading">OnePlus Nord N200 review</span>
                         </a>
-                        <a href="https://www.youtube.com/watch?v=EXR3Go7U2rk"   class="content__video col pc-6">
+                        <a href="https://www.youtube.com/watch?v=EXR3Go7U2rk"   class="content__video col pc-6 tb-6 mb-6">
                         <img src="https://i.ytimg.com/vi/D2_prN0etSE/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLASwvggFEjLs6DUD9f2gpa9DOerww" alt="" class="content__video-img">
                         <i class="fab fa-youtube content__video-icon"></i>
                         <span class="content__slider-heading heading">Android 12 Beat 3 - Everything you need to know</span>
@@ -1056,7 +1089,7 @@
                       </div>
                       <a href="" class="load-more">Load More</a>
                     </div>
-                    <div class="col pc-6 section">
+                    <div class="col pc-6 tb-12 mb-12section">
                       <div class="content__label">
                         <a href="" class="content__label-name">Latest deals
                          <i class="fas fa-arrow-right content__label-icon"></i>

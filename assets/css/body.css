@@ -175,10 +175,11 @@
 .main__content-img {
   background-clip: padding-box;
   height: 330px;
-  background-size: contain;
+  background-size: cover;
+  /* background-size: contain; */
   background-repeat: no-repeat;
   padding: 30px;
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -200,6 +201,12 @@
   background-color: #333;
   padding: 30px;
   border-radius: 4px;
+}
+
+.content__subscribe-top {
+  display: flex;
+  /* flex-wrap: wrap; */
+  /* width: 100%; */
 }
 
 .content__subscribe-icon {
