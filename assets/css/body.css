@@ -1,6 +1,7 @@
 .body {
   background-color: var(--black-color);
   margin-top: calc(var(--header-height) + var(--header__ad-height));
+  /* width: 100%; */
 }
 
 .intro {
@@ -205,8 +206,6 @@
 
 .content__subscribe-top {
   display: flex;
-  /* flex-wrap: wrap; */
-  /* width: 100%; */
 }
 
 .content__subscribe-icon {
@@ -270,7 +269,6 @@
 }
 
 .content__subscribe-policy {
-  display: flex;
   margin-top: 10px;
   color: #ccc;
   font-family: HKGrotesk-Med;
@@ -279,7 +277,8 @@
 .content__subscribe-policy-link {
   color: var(--main-color);
   font-family: HKGrotesk-SemiBold;
-  margin: 0 3px;
+  display: contents;
+  width: 90px;
 }
 
 .content__poll {
@@ -366,16 +365,15 @@
   color: rgba(200, 200, 200, 0.8);
   transition: color 0.2s;
 }
+
 .content__video-icon:hover {
   transition: color 0.2s;
-
   color: rgba(255, 0, 0, 0.9);
 }
 
 .content__slider-heading {
   margin-top: 4px;
   line-height: 20px;
-  /* height: 40px; */
   font-size: 1.8rem;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -400,21 +398,27 @@
   background-color: #333;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
+  border: none;
 }
 
 .content__deal-img {
   width: 300px;
+  object-fit: cover;
   width: 100%;
   height: 100%;
   border-radius: 4px;
 }
 
 .content__deal-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: #333;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
   padding: 15px 15px 15px 0;
   width: 50%;
+  border: none;
 }
 
 .content__deal-heading {
@@ -430,7 +434,8 @@
   font-size: 2rem;
   line-height: 2.4rem;
   display: flex;
-  margin: 57px 0 10px;
+  padding-top: 20px;
+  margin-left: 10px;
   justify-content: space-between;
 }
 
@@ -457,8 +462,11 @@
   font-size: 1.4rem;
   padding: 10px 23px;
   background-color: var(--main-color);
-  border-radius: 3px;
+  border-radius: 4px;
   transition: opacity 0.2s;
+  text-align: center;
+
+  /* width: 40%; */
 }
 
 .content__deal-shopping a:hover {

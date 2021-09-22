@@ -23,6 +23,14 @@
   font-family: HKGrotesk-Bold;
 }
 
+html {
+  /* overflow: hidden; */
+}
+
+.AndroidAuthority {
+  overflow: hidden;
+}
+
 @font-face {
   font-family: HKGrotesk-Bold;
   src: url(../fonts/hkgrotesk/OTF/HKGrotesk-Bold.otf);

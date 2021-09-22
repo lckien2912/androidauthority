@@ -19,10 +19,26 @@
     display: none;
   }
 
+  .navbar__devices-container {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+    z-index: 5;
+  }
+
+  .navbar__devices-container:focus {
+    display: none;
+  }
+
   .header__navbar {
     position: absolute;
     display: none;
-    top: 100%;
+    top: 0;
+    left: 0;
     z-index: 3;
     height: calc(100vh - var(--header-height));
     overflow-y: scroll;
@@ -63,7 +79,15 @@
     transform: scaleY(0);
   }
 
-  .navbar__menu:checked ~ .header__navbar {
+  .navbar__menu:checked ~ .navbar__devices-container {
+    display: block;
+  }
+
+  .navbar__devices-container:checked {
+    display: none;
+  }
+
+  .navbar__menu:checked ~ .navbar__devices-container > .header__navbar {
     display: block;
   }
 
@@ -79,12 +103,15 @@
 
   .navbar__option-button:checked .navbar__devices-icon {
     transform: rotate(180deg);
+    transition: transform 0.2s;
   }
 
   .navbar__devices-icon {
     display: block !important;
     font-size: 1.8rem;
     margin: auto 0;
+    /* transform: rotate(180deg); */
+    transition: transform 0.2s;
   }
 
   .subnav {
@@ -116,6 +143,11 @@
 
   .subnav__item-link {
     font-size: 1.8rem;
+  }
+
+  .header__search {
+    margin-right: 0;
+    width: 60px;
   }
 
   .header__deals {
@@ -161,13 +193,179 @@
   .header__navbar {
     width: 50%;
   }
+
+  .content__deal-shopping a {
+    width: 140px;
+  }
 }
 
 /* Mobile */
 @media (max-width: 740px) {
+  .body {
+    padding: 0 5px;
+  }
+  .header__ad-title {
+    font-size: 1.2rem;
+  }
+
+  .header__ad {
+    justify-content: center;
+  }
   .header__navbar {
     width: 100%;
-    /* height: 100%; */
-    bottom: 0;
+  }
+
+  .intro {
+    font-size: 1rem;
+  }
+
+  .content__label-name {
+    font-size: 2.6rem;
+  }
+
+  .main__content-img {
+    height: 100%;
+    background-size: 100% auto;
+    background-position: center;
+  }
+
+  .sub__content-img2 {
+    height: 100px;
+    width: auto;
+  }
+
+  .sub__content-type-1 {
+    padding-left: 00px;
+  }
+
+  .sub__content-type-1::before,
+  .sub__content-type-1::after {
+    display: none;
+  }
+
+  .sub__content-detail {
+    flex-direction: column;
+  }
+  .dot {
+    display: none;
+  }
+
+  .sub__content2-heading {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    margin-right: 16px;
+  }
+
+  .content__subscribe {
+    padding: 20px;
+  }
+
+  .content__subscribe-heading {
+    font-size: 2.2rem;
+    margin-bottom: 6px;
+    margin-top: 14px;
+  }
+
+  .content__subscribe-subheading {
+    line-height: 1.6rem;
+    display: none;
+  }
+
+  .content__subscribe-input {
+    margin-top: 20px;
+  }
+
+  .content__subscribe-button {
+    margin-top: 10px;
+  }
+
+  .content__poll-question {
+    font-size: 2rem;
+  }
+
+  .content__poll-choice {
+    height: 66px;
+    padding: 10px;
+    margin: 4px 0;
+  }
+
+  .content__video-icon {
+    display: none !important;
+  }
+
+  .content__deal {
+    height: 200px;
+  }
+
+  .content__deal-img-container {
+    width: 100%;
+  }
+
+  .content__deal-img {
+    object-fit: cover;
+  }
+
+  .content__deal-info {
+    width: 100%;
+  }
+
+  .content__deal-heading {
+    line-height: 2.2rem;
+  }
+
+  .content__deal-price {
+    /* margin-top: 15px; */
+    font-size: 1.8rem;
+    padding-top: 0;
+  }
+
+  .content__deal-old-price {
+    font-size: 1.6rem;
+  }
+
+  .content__deal-save {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+  }
+
+  .content__deal-shopping {
+    /* flex-direction: column; */
+  }
+
+  .content__deal-shopping a {
+    font-size: 1.2rem;
+    padding: 6px 20px;
+    width: 80px;
+  }
+
+  .footer__container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .footer-info {
+    text-align: center;
+  }
+
+  .footer__social {
+    margin-top: 40px;
+  }
+
+  .footer__item-ad {
+    margin-top: 40px;
+  }
+
+  .copyright {
+    margin-top: 40px;
+    flex-direction: column;
+  }
+
+  .footer__logo {
+    justify-content: center;
+    display: flex;
+  }
+
+  .aa-copyright {
+    text-align: center;
   }
 }

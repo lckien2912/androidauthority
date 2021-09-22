@@ -10,6 +10,9 @@
   left: 0;
   right: 0;
 }
+#navbar__checkbox {
+  display: none;
+}
 
 .header .header__logo {
   display: flex;
@@ -24,6 +27,10 @@
 
 .navbar__menu {
   display: none;
+}
+
+.navbar__devices-container {
+  display: flex;
 }
 
 .header__navbar {
@@ -99,8 +106,10 @@
 }
 
 .navbar__option-icon {
+  display: flex;
   font-size: 1.2rem;
-  padding-bottom: 4px;
+  /* padding-bottom: 4px; */
+  margin: auto 0;
   margin-left: 6px;
   transition: transform 0.3s;
 }
