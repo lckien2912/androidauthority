@@ -201,8 +201,16 @@
 
 /* Mobile */
 @media (max-width: 740px) {
+  .navbar__menu {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .header__search {
+    width: 40px;
+  }
   .body {
-    padding: 0 5px;
+    padding: 0 10px;
   }
   .header__ad-title {
     font-size: 1.2rem;
@@ -334,13 +342,12 @@
 
   .content__deal-shopping a {
     font-size: 1.2rem;
-    padding: 6px 20px;
-    width: 80px;
+    padding: 6px 14px;
+    width: 78px;
   }
 
   .footer__container {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 30px;
   }
 
   .footer-info {
@@ -348,15 +355,15 @@
   }
 
   .footer__social {
-    margin-top: 40px;
+    margin-top: 50px;
   }
 
   .footer__item-ad {
-    margin-top: 40px;
+    margin-top: 50px;
   }
 
   .copyright {
-    margin-top: 40px;
+    margin-top: 50px;
     flex-direction: column;
   }
 
@@ -367,5 +374,6 @@
 
   .aa-copyright {
     text-align: center;
+    margin-top: 50px;
   }
 }
