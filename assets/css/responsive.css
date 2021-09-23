@@ -4,9 +4,13 @@
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1220px) {
   .header__deals {
     display: none;
+  }
+
+  .content__deal {
+    height: 205px;
   }
 }
 
@@ -353,10 +357,6 @@
   .content__deal-save {
     font-size: 1.2rem;
     line-height: 1.4rem;
-  }
-
-  .content__deal-shopping {
-    /* flex-direction: column; */
   }
 
   .content__deal-shopping a {
