@@ -1,3 +1,15 @@
+@media (max-width: 1400px) {
+  .navbar__option {
+    padding: 0 6px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .header__deals {
+    display: none;
+  }
+}
+
 /* Mobile & tablet */
 @media (max-width: 1023px) {
   .header {
