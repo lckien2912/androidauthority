@@ -12,6 +12,10 @@
   .content__deal {
     height: 205px;
   }
+
+  .content__deal-shopping a:first-child {
+    margin-right: 6px;
+  }
 }
 
 /* Mobile & tablet */
@@ -217,8 +221,13 @@
     width: 50%;
   }
 
+  .content__deal {
+    height: 235px;
+  }
+
   .content__deal-shopping a {
     width: 140px;
+    padding: 10px 20px;
   }
 }
 
@@ -242,6 +251,11 @@
   .header__ad {
     justify-content: center;
   }
+
+  .header__ad-content {
+    margin: 13px auto;
+  }
+
   .header__navbar {
     width: 100%;
   }
@@ -362,7 +376,17 @@
   .content__deal-shopping a {
     font-size: 1.2rem;
     padding: 6px 14px;
-    width: 78px;
+    flex: 1;
+  }
+
+  .content__deal-shopping a:first-child {
+    margin-right: 6px;
+  }
+
+  .content__deal-shopping a:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .footer__container {
