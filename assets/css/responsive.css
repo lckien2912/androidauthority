@@ -45,6 +45,9 @@
     overflow-y: scroll;
     background-color: #333;
     color: var(--white-color);
+    transition-origin: left;
+    animation: slideX ease 0.2s;
+    transition: transform 0.2s;
   }
 
   .navbar__deals {
@@ -148,6 +151,10 @@
   .header__search {
     margin-right: 0;
     width: 60px;
+  }
+
+  .header__search-icon:hover {
+    background-color: transparent;
   }
 
   .header__deals {
